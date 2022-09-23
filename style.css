@@ -14,34 +14,37 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 /* container */
 .container {
-  width: 1010px;
-  margin: 50px 0px;
+  width: 100%;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 .wrapper {
-  box-sizing: border-box;
-  background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0,0,0,.1);
   border-radius: 0.25rem;
-  padding: 0px 250px;
+  background-color: #f8f9fa;
 }
 
 
 /* social */
 h4 {
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 10px;
 
@@ -110,37 +113,43 @@ h4 {
 
 /* form */
 form {
-  padding: 30px 100px;
+  padding: 1.25rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .form-control{
   width: 100%;
-  padding: 12px 10px;
+  height: 40px;
+  padding: 10px 10px;
   font-size: 15px;
   border-bottom-right-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   outline: none;
   color: gray;
-  border: 0.1px solid transparent
+  border: 1px solid #ced4da;
 }
-#phonenumber {
-  border-left: 1px solid #ced4da;
+.custom-select {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  color: grey;
+  border: 1px solid #ced4da;
+  border-right: none;
 }
-.over {
-  display: flex;
-  flex-direction: column;
-}
+
 .form-field {
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  /* width: 100%; */
+  /* border: 1px solid #ced4da; */
+  /* border-radius: 0.25rem; */
   margin-bottom: 15px;
 }
-.form-field.success .form-control {
+.form-field.success input {
   border-color: var(--success-color);
 }
 .form-field.error .form-control {
@@ -155,14 +164,10 @@ form {
   height: 40px;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
-  border-left: none;
-  border-bottom: none;
-  border-top: none;
+  border-right: none;
   border-bottom-left-radius: 0.25rem;
   border-top-left-radius: 0.25rem;
   outline: none;
-  left: 0;
-  bottom: 0;
 }
 .square i {
   display: flex;
